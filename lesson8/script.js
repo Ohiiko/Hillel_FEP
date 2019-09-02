@@ -1,15 +1,30 @@
 "use strict";
+let newUl;
+let newLi;
+
 
 document.getElementById('addBtn') 
   .addEventListener('click', onClick);
 
 function onClick(){
-  const newUl = document.createElement('ul');
+  creatUl();
+  replaseUl();
+  creatLi();
+}
+
+function creatUl(){
+  newUl = document.createElement('ul');
   newUl.id = 'list';
-  list.replaceWith(newUl);
-  
+}
+
+function replaseUl(){
+  let oldUl = document.getElementById('list');
+  oldUl.replaceWith(newUl);
+}
+
+function creatLi(){
   for( let i = 1; i <= (document.getElementById('count').value); i++){
-    let newLi = document.createElement('li');
+    newLi = document.createElement('li');
     newLi.innerHTML = i;
     newUl.append(newLi);
   }
