@@ -19,4 +19,3 @@ console.log(calculator.divide(5)); // возвращает 2
 console.log(calculator.mult(5)); // возвращает 10 
 console.log(calculator.set(100)); // устанавливает базовое значение в 100 
 console.log(calculator.mult(5)); // возвращает 500
-
