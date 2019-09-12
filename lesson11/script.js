@@ -18,14 +18,14 @@ const students = [
   new Student('Student 12', [10,0,8,0,3,4])
 ];
 
-function averageMark(){
-  return allBall()/students.length;
+function averageMark(value){
+  return allBall(value)/value.length;
 }
 
-function allBall(){
+function allBall(value){
   let totalScore = null;
-  for (let i=0; i<students.length; i++){
-  totalScore += students[i].averageMark();
+  for (let i=0; i<value.length; i++){
+  totalScore += value[i].averageMark();
   }
   return totalScore;
 }
