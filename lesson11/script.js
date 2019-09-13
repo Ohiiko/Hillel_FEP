@@ -1,31 +1,19 @@
 "use strict";
 
-
-function Student(name, ball){
+function Student(name, marks){
   this.name = name;
-  this.ball = ball;
+  this.marks = marks;
 }
 
-const methodAverage = {averageMark: function(){
-  return  this.ball.reduce((sum, current) => sum + current) / this.ball.length;
-  }
-};
-
-Student.prototype = methodAverage;
-    
+Student.prototype.averageMark = function(){
+  return  this.marks.reduce((sum, current) => sum + current) / this.marks.length;
+}
+ 
 const students = [ 
   new Student('Student 1', [10,9,8,0,10]), // имя, оценки
   new Student('Student 12', [10,0,8,0,3,4])
 ];
 
-function averageMark(value){
-  return allBall(value)/value.length;
-}
-
-function allBall(value){
-  let totalScore = null;
-  for (let i=0; i<value.length; i++){
-  totalScore += value[i].averageMark();
-  }
-  return totalScore;
+function averageMark(arr){
+  return arr.reduce((sum, current) => sum + current.averageMark(),0)/arr.length;
 }
