@@ -4,14 +4,20 @@ class Gallery{
         this.elem = elem;
         this.itemFoto = null;
         this.wrap = document.createElement('div');
-        this.allFoto = document.getElementById('container');
-        this.totalFoto = this.elem.children.length;
-        this.prevFoto = document.createElement('span');
-        this.nextFoto = document.createElement('span');
-        this.FotoGallery();       
+        this.photosCount = this.elem.children.length;
+        this.fotoGallery();       
     }
 
-    FotoGallery(){    
+    static wrappers = 'slider';
+    static fotoBox = 'slider-items';
+    static classItems = 'item';
+    static backFoto = 'left-slide';
+    static forwardFoto = 'right-slide';
+    static showFoto = 'active';
+
+
+
+    fotoGallery(){    
         this.creatWrapper();
         this.creatClassName();
         this.creatBtn();
@@ -22,30 +28,27 @@ class Gallery{
     }
 
     creatWrapper(){
-        Gallery.wrappers = 'slider';
         this.wrap.classList.add(Gallery.wrappers);
-        this.allFoto.before(this.wrap);
-        this.wrap.prepend(this.allFoto);
+        this.elem.before(this.wrap);
+        this.wrap.prepend(this.elem);
     }
 
     creatClassName(){
-        Gallery.fotoBox = 'slider-items';
-        Gallery.classItems = 'item';
         this.elem.classList.add(Gallery.fotoBox);
-        for (let i = 0; i < this.totalFoto; i++) {
+        for (let i = 0; i < this.photosCount; i++) {
         this.elem.children[i].classList.add(Gallery.classItems);
         }
        
     }
 
     creatBtn(){
+        this.prevFoto = document.createElement('span');
+        this.nextFoto = document.createElement('span');
         this.wrap.append(this.prevFoto);
         this.prevFoto.innerHTML = '<';
-        Gallery.backFoto = 'left-slide';
         this.prevFoto.classList.add(Gallery.backFoto);
         this.wrap.append(this.nextFoto);
         this.nextFoto.innerHTML = '>';
-        Gallery.forwardFoto = 'right-slide';
         this.nextFoto.classList.add(Gallery.forwardFoto);
     }
 
@@ -58,7 +61,6 @@ class Gallery{
 
     addActivClass(el){
         this.removeItemFoto();
-        Gallery.showFoto = 'active';
         this.itemFoto = el;
         this.itemFoto.classList.add(Gallery.showFoto);
     }
@@ -82,7 +84,7 @@ class Gallery{
         if (this.prevShow){
             this.addActivClass(this.prevShow);
         }else if(!this.prevShow){
-            this.show(this.totalFoto-1);
+            this.show(this.photosCount-1);
         }  
     }   
 }
