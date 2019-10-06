@@ -1,0 +1,50 @@
+.contact-list{
+    margin-bottom: 20px;
+}
+.contact-item {
+    width: 20%;
+    color: #555;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 5px 33px 5px 0;
+    font-size: 20px;
+    background-color: lightskyblue;
+
+}
+
+
+.delete-btn{
+    float: right;
+    width: 5%;
+    height: 35px;
+    margin: 5px 0;
+}
+
+.contaktInputs {
+    display: flex; 
+}
+
+
+.inpContact{
+    width: 308px;
+    margin-right: 33px;
+}
+
+.inputItem{
+    width: 100%;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+}
+
+.new{
+    background-color: lightgreen;
+}
+
+
+.add{
+    width: 22%;
+}
