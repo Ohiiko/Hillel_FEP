@@ -30,13 +30,13 @@
         <form id="addContact">
             <div class="contaktInputs row">
                 <div class="inputItem columns">
-                    <input type="text" id="contactNameInput" class="inpContact">
+                    <input type="text" id="contactSurnameInput" class="inpContact">
 				</div>
 				<div class="inputItem columns">
-						<input type="text" id="contactNameInput2" class="inpContact">
+						<input type="text" id="contactNameInput" class="inpContact">
 				</div>
 				<div class="inputItem columns">
-						<input type="text" id="contactNameInput3" class="inpContact">
+						<input type="text" id="contactTelephoneInput" class="inpContact">
 				</div>
                 <div class="inputItem columns">
                     <input type="submit" class="add" value="Add">
@@ -47,8 +47,15 @@
 
     <script type="text/template" id="contactItemTemplate">
         <div class="contact-item new">
-            {{title}}
+            {{surname}}
         </div>
+        <div class="contact-item new">
+            {{name}}
+        </div>
+        <div class="contact-item new">
+            {{telephone}}
+        </div>
+        <input type="button" class="delete-btn" value="Delete">
     </script>
 </body>
 </html>

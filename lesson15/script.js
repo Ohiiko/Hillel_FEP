@@ -1,7 +1,9 @@
 "use strict" 
 
 const addContact = document.getElementById('addContact');
+const contactSurnameInput = document.getElementById('contactSurnameInput');
 const contactNameInput = document.getElementById('contactNameInput');
+const contactTelephoneInput = document.getElementById('contactTelephoneInput');
 const contactList = document.getElementById('contactList');
 const contactItemTemplate = document.getElementById('contactItemTemplate').innerHTML;
 
@@ -15,7 +17,6 @@ function onAddContactFormSubmit(event){
     submitForm();
 }
 
-
 function onContaktListClick(event){
     if(event.target.classList.contains('delete-btn') && event.target.parentElement != document.querySelector('.contact')){
         deleteTask(event.target.parentElement);
@@ -23,46 +24,23 @@ function onContaktListClick(event){
 }
 
 function submitForm(){
-    const surname = { title: contactNameInput.value };
-    const name = { title: contactNameInput2.value };
-    const telephone = { title: contactNameInput3.value };
+    const contact = {
+        surname:  contactSurnameInput.value, 
+        name:  contactNameInput.value,
+        telephone:  contactTelephoneInput.value};
 
-
-    addContactValue(surname);
-    addContactValue(name);
-    addContactValue(telephone);
-    creatContact()
+    addContactValue(contact);
     resetForm();
 }
 
-function creatContact(){
-    const contact = document.createElement('div');
-    contact.classList.add('contact');
-    contactList.appendChild(contact);
-    addContactItem(contact);
-    addDelBtn(contact);
-    
-}
-
-function addContactItem(contact){
-    let elementsContact = document.querySelectorAll('.contact-list > .new');
-    for (let elem of elementsContact) {
-        contact.appendChild(elem);
-    }
-}
-
-function addDelBtn(contact){
-    let delBtn = document.querySelector('.delete-btn');
-    let newDelBtn = delBtn.cloneNode(true);
-    contact.appendChild(newDelBtn);
-}
-
 function addContactValue(value){
-    const html = contactItemTemplate.replace('{{title}}', value.title);
-    const newContactEl = htmlToElement(html)
-    contactList.appendChild(newContactEl);
-    
-    
+    const contactElem = document.createElement('div');
+    contactElem.classList.add('contact');
+    contactList.appendChild(contactElem);
+    contactElem.innerHTML = contactItemTemplate
+                            .replace('{{surname}}', value.surname)
+                            .replace('{{name}}', value.name)
+                            .replace('{{telephone}}', value.telephone);
 }
 
 function resetForm(){
@@ -72,11 +50,4 @@ function resetForm(){
 
 function deleteTask(el){
     el.remove();
-}
-
-function htmlToElement(html) {
-    const template = document.createElement('template');
-    html = html.trim();
-    template.innerHTML = html;
-    return template.content.firstChild;
 }
