@@ -1,0 +1,20 @@
+.userFoto{
+    float: right;
+}
+
+.userInfo{
+    display: inline-grid;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.usersName{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+#allUsersList{
+    font-size: 18px;
+    color: rgb(50, 35, 190);
+}
+
