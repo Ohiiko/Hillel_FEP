@@ -1,0 +1,45 @@
+
+.userInfo .userCompany .userAddress{
+    font-size: 16px;
+    margin: 10px;
+}
+
+.usersName{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+#allUsersList{
+    color: bisque;
+    font-size: 18px;
+    background: rgb(95, 81, 226);
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.usersName:hover{
+    color: bisque;
+    background: rgb(31, 13, 190);
+
+}
+
+
+#addNewUserBtn{
+    margin-left: 0;
+    background: rgb(234, 236, 95);
+}
+
+
+#saveUserBtn{
+    background: rgb(21, 197, 15);
+}
+
+
+#deleteUserBtn{
+    background: rgb(253, 108, 82);
+}
+
+.invisible #deleteUserBtn{
+    display: none;
+}
