@@ -1,0 +1,10 @@
+td{
+    background: rgb(147, 223, 236);
+    border: black solid 1px;
+    height: 100px;
+}
+
+#table{
+    margin: 0 auto;
+    border: black solid 2px;
+}
