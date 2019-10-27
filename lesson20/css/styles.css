@@ -1,0 +1,44 @@
+
+.containet{
+    width: 665px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.titleDesck{
+    font-size: 18px;
+    height: 30px;
+    margin: 5px 0;
+}
+
+.titleText
+
+#btnAddStiker{
+    float: right;
+    width: 140px;
+}
+
+
+.bodyBoard{
+    
+    width: 665px;
+    min-height: 1000px;
+    border: rgb(24, 20, 36) solid 4px;  
+}
+
+.newStikerElement{
+    float: none;
+    margin: 5px 5px;
+    width: 206px;
+    height: 188px;
+    border: aqua solid 4px;
+    display: inline-block;
+}
+
+#deleteStikerBtn{
+    float: right;
+    color: rgb(238, 10, 10);
+    padding: 0 3px;
+    cursor: pointer;
+}
