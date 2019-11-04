@@ -1,0 +1,58 @@
+.container {
+  padding-top: 10px;
+}
+
+.userInfo { 
+  padding: 10px; 
+  border: 1px solid #74c0e4;
+}
+
+div h4 {  
+  margin-left: 20px;
+}
+
+.inputSource {
+  padding: 5px 0;
+}
+
+.avatar_name div{
+    display: inline;
+}
+
+.nameUser{
+    position: relative;
+    bottom: 100;
+    left: 115px;
+    font-size: 20px;
+}
+
+.nameUser div{
+    display: inline;
+}
+
+.nameUser div a{
+    font-size: 15px;
+}
+
+.dataUser{
+    text-align: center;
+    font-size: 30px;
+}
+
+.dataUser div:last-child {
+    font-size: 20px;
+}
+
+.ui-menu-item{
+    list-style-type: none;
+    margin: 0;
+}
+
+.ui-menu-item:hover{
+    background-color: lawngreen;
+    width: 960px;
+}
+
+.ui-helper-hidden-accessible:last-child{
+    display: none;
+}

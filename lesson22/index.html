@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Source User</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/styles.css"> 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  <script src="./script.js"></script>  
+</head>
+<body>  
+    <div class="container">
+        <div class="row ui-widget">
+            <label for="users"></label>
+            <input class = "twelve columns inputSource" id="usersSource" placeholder = "Source user Github"/>
+        </div>
+        <div id="userInfoBoard"></div> 
+    </div>
+    <script type="text/template" id ="userTemplate">
+        <div class="userInfo">
+            <div class=" row">
+                <div><h4>Github User</h4></div>
+                <div class="one columns"><img style="height: 100px; width: 100px; overflow: auto;" src="{{urlAvatar}}"/></div>
+                <div class = "nameUser">{{name}}
+                    <div>(<a href="{{urlLinkGithub}}">{{urlGithub}}</a>)</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns dataUser"> {{publicRepos}}
+                    <div>Repositories</div>
+                </div>
+                <div class="four columns dataUser">{{followers}}
+                    <div>Followers</div>
+                </div>
+                <div class="four columns dataUser"> {{date}}
+                    <div>Registration</div>
+                </div>  
+            </div>
+        </div>
+    </script>     
+</body>
+</html>
